@@ -10,11 +10,12 @@
 class Task {
 public:
 
-    explicit Task(const std::string description="", bool done= false, int day=10, int month=05 , int year =2017)
+    explicit Task( const std::string description, bool done=false, int day=10, int month=05 , int year =2017) : description(description), done(done),day(day),month(month),year(year) {};
 
+    std::string description;
     bool done;
     int day , month ,year;
-    std::string description;
+
 };
 
 
