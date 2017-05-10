@@ -1,6 +1,7 @@
 #include <iostream>
 #include <list>
 #include <vector>
+#include <algorithm>
 
 #include "Task.h"
 
@@ -33,7 +34,11 @@ int main() {
     for (Task& t : agendaV )
     t.done = true;
 
-
+    auto itr = std::find(std::begin(agendaL), std::end(agendaL), t2);
+    if (itr != std::end(agendaL)){
+        std::cout << "Trovato con find" << std::endl;
+        itr->done = true;
+    }
     return 0;
 
 }

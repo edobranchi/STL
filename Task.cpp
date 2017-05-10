@@ -3,3 +3,9 @@
 //
 
 #include "Task.h"
+
+bool Task::operator==(const Task &right) const {
+    if(description != right.description)
+        return false;
+    return true;
+}
